@@ -2,3 +2,15 @@
 @import url(header.css);
 @import url(news.css);
 @import url(user.css);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
