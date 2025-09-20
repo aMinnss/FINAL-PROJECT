@@ -2,9 +2,18 @@
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 8px;
+    
 }
 
 .button--blue{
     background-color: #0077B6;
     color: white;
+    border: none;
+}
+
+.button--red{
+    background-color: #C1121F;
+    font-weight: 600;
+    color: white;
+    border: none;  
 }

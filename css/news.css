@@ -12,7 +12,7 @@
 .news-card{
     display: flex;
     gap: 20px;
-    padding: 10px 20px;
+    padding: 10px 40px;
 
 }
 
@@ -21,11 +21,8 @@
 }
 
 .news-card__title{
-    /* gap: 20px; */
     text-decoration: none;
     color: #3D3D3D;
-    /* padding: 0;
-    margin: 0; */
 }
 
 .news-card__attributes{
@@ -37,17 +34,22 @@
     justify-content: end;
 }
 
+.news-card__actions{
+    gap: 10px;
+}
+
 .user__avatar img{
     width: 30px;
     height: auto;
 }
 
 .news-card__image {
-    width: 100%;
+    display: flex;
+    align-items: end;
 }
 
 .news-card__image img{
-    width: 100%;
+    width: 230px;
     height: auto;
     border-radius: 8px;
 }
