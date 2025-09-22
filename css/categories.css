@@ -1,0 +1,16 @@
+.page-title{
+    margin: 40px;
+}
+
+.categories__name{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+.categories__item{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}

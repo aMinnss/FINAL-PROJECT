@@ -9,18 +9,16 @@ async function fetchAndRenderNews() {
         document.querySelector('.news-grid').innerHTML = newsArray.map(news => `
             <article class="news-card">
                 <div class="news-card__image">
-                    <img src="img/main__news-card.jpg" alt="Пенсионные отчисления казахстанцев: Минтруда упразднит один из видов госуслуг">
+                    <img src="${BASE_URL}${news.thumbnail.startsWith('/') ? '' : '/'}${news.thumbnail}" 
+                    alt="${news.title}">
                 </div>
 
                 <div class="news-card__content">
-                    <a class="news-card__link" href="./detail-news.html?id=1">
-                        <h2 class="news-card__title">
-                            Пенсионные отчисления казахстанцев: Минтруда 
-                            упразднит один из видов госуслуг
-                        </h2>
+                    <a class="news-card__link" href="./detail-news.html?id=${news.id}">
+                        <h2 class="news-card__title">${news.title}</h2>
 
                         <p class="news-card__attributes">
-                            21.10.2024г. • Спорт
+                            ${news.createdAt} • ${news.category.name || 'Категория'}
                         </p>
                     </a>
 
@@ -30,13 +28,13 @@ async function fetchAndRenderNews() {
                                 <div class="user__avatar">
                                     <img src="img/main__user-avatar.jpg" alt="Аватар">
                                 </div>
-                                <p class="user__name">Администратор</p>
+                                <p class="user__name">${news.author.name || 'Неизвестный автор'}</p>
                             </div>
                         </div>
 
                         <div class="news-card__actions">
                             <a 
-                                href="" 
+                                href="/edit-news.html?id=${news.id}" 
                                 class="button button--blue button--small"
                             >
                                 Редактировать
@@ -44,7 +42,7 @@ async function fetchAndRenderNews() {
                             <button
                                 type="button"
                                 class="button button--red button--small"
-                                onclick="deleteNews(1)"
+                                onclick="deleteNews(${news.id})"
                             >
                                 Удалить
                             </button>
