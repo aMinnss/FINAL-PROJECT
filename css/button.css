@@ -13,7 +13,7 @@
 
 .button--red{
     background-color: #C1121F;
-    font-weight: 600;
+    /* font-weight: 600; */
     color: white;
     border: none;  
 }

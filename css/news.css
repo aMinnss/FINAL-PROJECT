@@ -32,6 +32,8 @@
 .news-card__author, .news-card__actions{
     display: flex;
     justify-content: end;
+    margin-left: auto;
+    
 }
 
 .news-card__actions{
