@@ -14,7 +14,7 @@ async function fetchAndRenderNews() {
                 </div>
 
                 <div class="news-card__content">
-                    <a class="news-card__link" href="./detail-news.html?id=${news.id}">
+                    <a class="news-card__link" href="./news.html?id=${news.id}">
                         <h2 class="news-card__title">${news.title}</h2>
 
                         <p class="news-card__attributes">
