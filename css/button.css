@@ -2,7 +2,9 @@
     padding-block: 12px;  
     padding-inline: 24px;
     text-decoration: none;
-    
+    border-radius: 8px;
+    transition: brightness 150ms ease-in-out;
+
     /* text-decoration: none;
     padding: 10px 20px;
     border-radius: 8px; */
