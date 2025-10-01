@@ -4,6 +4,10 @@
     text-decoration: none;
     border-radius: 8px;
     transition: brightness 150ms ease-in-out;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 600S;
 
     /* text-decoration: none;
     padding: 10px 20px;
