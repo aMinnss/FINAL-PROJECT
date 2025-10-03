@@ -1,27 +1,26 @@
-.button{
+.button {
     padding-block: 12px;  
     padding-inline: 24px;
     text-decoration: none;
     border-radius: 8px;
-    transition: brightness 150ms ease-in-out;
+    transition: filter 150ms ease-in-out;
     cursor: pointer;
     border: none;
     font-size: 16px;
     font-weight: 600S;
-
-    /* text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px; */
-    
 }
 
-.button--blue{
+.button:hover {
+    filter: brightness(90%);
+} 
+
+.button--blue {
     background-color: #0077B6;
     color: white;
     border: none;
 }
 
-.button--red{
+.button--red {
     background-color: #C1121F;
     /* font-weight: 600; */
     color: white;
