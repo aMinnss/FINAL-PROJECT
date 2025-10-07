@@ -1,41 +1,35 @@
 .header{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 48px;
     align-items: center;
-    justify-content: space-between;
-    padding: 30px 40px;
-}
-
-.header__nav{
-    margin-right : auto;
-    margin-left: 30px;
+    margin-inline: 56px;
+    padding-block: 24px;
 }
 
 .header__nav-list{
     display: flex;
-    gap: 40px;
+    gap: 24px;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .header__nav-link{
+    padding-block: 8px;
+    padding-inline: 24px;
     text-decoration: none;
     color: #3D3D3D;
-    
+    border-radius: 8px;
 }
 
 .header__nav-link--active{
     background-color: #F0F0F0;
-    padding: 10px 20px;
-    margin: 0px;
-    border-radius: 8px;
-}
-
-.header__auth {
-    margin-left: 20px;
 }
 
 .header__logo img{
     width: 150px;
     height: auto;
+}
+
+.header__user {
+    margin-right: 20px;
 }

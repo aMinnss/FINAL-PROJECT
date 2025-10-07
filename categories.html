@@ -8,6 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/categories.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <a href="./index.html" class="header__logo">
             <img src="img/main__janalyq.jpg" alt="Логотип">
@@ -38,15 +40,13 @@
                 </li>
             </ol>
         </nav>
-        <div class="news-card__author">
-            <div class="user">
+        <div class="header__auth news-card__author">
+            <div class="user header__user">
                 <div class="user__avatar">
                     <img src="img/main__user-avatar.jpg" alt="Аватар">
                 </div>
                 <p class="user__name">Администратор</p>
             </div>
-        </div>
-        <div class="header__auth">
             <a href="./login.html" class="button button--red">
                 Выйти
             </a>
@@ -77,6 +77,9 @@
                 </div>
             </div>
         </div>
+        <button class="categories-add">
+            <img src="img/add-button.jpg" alt="add icon">
+        </button>
 
     <!-- JS -->
     <script src="js/categories.js"></script>
