@@ -1,34 +1,36 @@
-.page-title{
+.page-title {
     margin: 40px;
 }
 
-.categories__name{
+.categories__name {
     display: flex;
     align-items: center;
     font-weight: bold;
     margin: 0;
 }
 
-.categories__item{
+.categories__item {
     display: flex;
     justify-content: space-between;
     margin-inline: 56px;
     margin-block: 48px;;
 }
 
-/* .categories-add{
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    padding: 0px;
-    border-radius: 16px;
+.categories-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: #52B788;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
     border: none;
-    outline: none;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
 }
 
-.categories-add > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-} */
+.categories-add > img {
+    display: block;
+}
