@@ -51,9 +51,54 @@ async function fetchAndRenderNews() {
                 </div>
             </article>
             `).join('');
+            setupActionButtons();
     } catch (error) {
         console.error('Ошибка при получении новостей:', error);
     }
 }
 
-document.addEventListener('DOMContentLoaded', fetchAndRenderNews);
+function setupActionButtons() {
+    const authToken = localStorage.getItem("authToken");
+
+    const headerAuth = document.querySelector(".header__auth");
+    if (authToken) {
+        headerAuth.innerHTML = `<button class="button button--red" onclick="logout()">Выйти</button>`;
+    }
+
+    document.querySelectorAll(".news-card__actions a.button--blue").forEach(link => {
+        link.addEventListener("click", event => {
+            if (!authToken) {
+                event.preventDefault();
+                alert("Авторизуйтесь для редактирования."); 
+          }
+        });
+    });
+
+    document.querySelectorAll(".news-card__actions button.button--red").forEach(button => {
+        button.addEventListener("click", () => {
+            if (!authToken) return alert("Авторизуйтесь для удаления.");
+            deleteNews(button.getAttribute("onclick").match(/\d+/)[0]);
+        });
+    });
+}
+
+function displayCreateButton() {
+    if (localStorage.getItem("authToken")) {
+        const createButton = document.createElement("button");
+        createButton.className = "button button--green";
+        createButton.textContent = "+";
+        createButton.onclick = () => (window.location.href = "./create.html");
+        document.querySelector('news-grid').before(createButton);
+    }
+}
+
+function logout() {
+    localStorage.removeItem("authToken");
+    window.location.reload();
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchAndRenderNews();
+    displayCreateButton();
+});

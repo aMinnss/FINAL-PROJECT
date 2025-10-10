@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column; /* перепроверить */
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E6E6E6;
+    border-radius: 32px;
+    width: 500px;
+    margin-inline: auto;
+}
+
+ .box{
+    /* color: #BDBDBD; */
+
+ }
+
+.email-input{
+    width: 436px;
+    height: 56px;
+    border-radius: 12px;
+}
+
+.password-input{
+    width: 436px;
+    height: 56px;
+}
+
+.login-button{
+    background-color: #0077B6;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: medium;
+    width: 436px;
+    height: 48px;
+}

@@ -17,10 +17,8 @@
 }
 
 .categories-add {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+    color: white;
+    font-size: 32px;
     background-color: #52B788;
     width: 80px;
     height: 80px;
@@ -29,8 +27,4 @@
     position: fixed;
     bottom: 24px;
     right: 24px;
-}
-
-.categories-add > img {
-    display: block;
 }
