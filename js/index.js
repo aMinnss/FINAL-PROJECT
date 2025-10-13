@@ -34,7 +34,7 @@ async function fetchAndRenderNews() {
 
                         <div class="news-card__actions">
                             <a 
-                                href="/edit-news.html?id=${news.id}" 
+                                href="./edit.html?id=${news.id}" 
                                 class="button button--blue button--small"
                             >
                                 Редактировать
@@ -85,10 +85,10 @@ function setupActionButtons() {
 function displayCreateButton() {
     if (localStorage.getItem("authToken")) {
         const createButton = document.createElement("button");
-        createButton.className = "button button--green";
+        createButton.className = "create-button button--green";
         createButton.textContent = "+";
         createButton.onclick = () => (window.location.href = "./create.html");
-        document.querySelector('news-grid').before(createButton);
+        document.querySelector('.news-grid').before(createButton);
     }
 }
 

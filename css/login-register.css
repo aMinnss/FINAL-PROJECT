@@ -1,0 +1,68 @@
+body {
+    margin: 0; /* чтобы убрать стандартные отступы браузера */
+    height: 100vh; /* 100% высоты окна браузера */
+    display: flex;
+    flex-direction: column; /* перепроверить */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* перепроверить */
+    justify-content: center;
+    align-items: center;
+    padding: 48px 32px;
+    border: 1px solid #E6E6E6;
+    border-radius: 32px;
+    width: 500px;
+    margin-inline: auto;
+}
+
+ .box {
+    color: #707070;
+ }
+
+ .email, .password {
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 14px;
+ }
+
+.email-input, .password-input {
+    width: 436px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid #BDBDBD;
+    padding-left: 12px;
+}
+
+.email-input::placeholder, 
+.password-input::placeholder {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;;
+    color: #BDBDBD;
+}
+
+.login-button {
+    background-color: #0077B6;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: medium;
+    width: 436px;
+    height: 48px;
+    margin-block: 24px;
+}
+
+.register {
+    margin-top: 0px;
+    margin-bottom: 32px;
+    color: #707070;
+}
+
+.register-login {
+    text-decoration: none;
+    color: #0077B6;
+}

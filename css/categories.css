@@ -15,16 +15,3 @@
     margin-inline: 56px;
     margin-block: 48px;;
 }
-
-.categories-add {
-    color: white;
-    font-size: 32px;
-    background-color: #52B788;
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
-    border: none;
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-}
