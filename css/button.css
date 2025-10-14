@@ -42,3 +42,14 @@
     bottom: 24px;
     right: 24px;
 }
+
+.auth-button {
+    background-color: #0077B6;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: medium;
+    width: 436px;
+    height: 48px;
+    margin-block: 24px;
+}

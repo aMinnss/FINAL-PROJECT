@@ -24,13 +24,13 @@ body {
     color: #707070;
  }
 
- .email, .password {
+ .name, .email, .password {
     margin-bottom: 4px;
     font-weight: 500;
     font-size: 14px;
  }
 
-.email-input, .password-input {
+.name-input, .email-input, .password-input {
     width: 436px;
     height: 56px;
     border-radius: 12px;
@@ -38,22 +38,12 @@ body {
     padding-left: 12px;
 }
 
+.name-input::placeholder, 
 .email-input::placeholder, 
 .password-input::placeholder {
     font-size: 16px;
     font-family: 'Inter', sans-serif;;
     color: #BDBDBD;
-}
-
-.login-button {
-    background-color: #0077B6;
-    color: white;
-    border-radius: 8px;
-    border: none;
-    font-size: medium;
-    width: 436px;
-    height: 48px;
-    margin-block: 24px;
 }
 
 .register {
