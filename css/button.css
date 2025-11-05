@@ -22,7 +22,6 @@
 
 .button--red {
     background-color: #C1121F;
-    /* font-weight: 600; */
     color: white;
     border: none;  
 }
@@ -52,4 +51,8 @@
     width: 436px;
     height: 48px;
     margin-block: 24px;
+}
+
+.button-margin{
+    margin-top: 25px;
 }

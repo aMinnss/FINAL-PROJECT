@@ -8,7 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/create-edit.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,39 +47,28 @@
                 </div>
                 <p class="user__name">Администратор</p>
             </div>
-            <a href="./login.html" class="button button--blue">
-                Войти
+            <a href="./login.html" class="button button--red">
+                Выйти
             </a>
         </div>
     </header>
-    
-        <h1 class="page-title categories__title">
-            Категорий
-        </h1>
-        <div class="categories">
-            <div class="categories__list">
-                <div class="categories__item">
-                    <p class="categories__name">Спорт</p>
-                    <div class="news-card__actions">
-                        <a 
-                            href="./edit-categories.html"  
-                            class="button button--blue button--small"
-                        >
-                            Редактировать
-                        </a>
-                        <button
-                            type="button"
-                            class="button button--red button--small"
-                            data-id="1"
-                        >
-                            Удалить
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+    <main>
+        <form class="container">
+            <h2 class="add-categories">Редактирование категорий</h2>
+            <div class="box">
+                <p class="category-name">Название</p>
+                <input
+                class="name-input"
+                type="text"
+                placeholder="Введите название"
+                >
+            </div>
+            <button class="button button--blue button-margin"> Сохранить изменения</button>
+        </form>
+    </main>
+    
     <!-- JS -->
-    <script src="js/categories.js"></script>
+    <script src="js/edit-categories.js"></script>
 </body>
 </html>

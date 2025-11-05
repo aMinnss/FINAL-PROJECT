@@ -2,20 +2,21 @@ main {
     margin: 0; /* чтобы убрать стандартные отступы браузера */
     height: 100vh; /* 100% высоты окна браузера */
     display: flex;
-    flex-direction: column; /* перепроверить */
+    flex-direction: column;
     align-items: center;
 }
 
 .container {
     display: flex;
-    flex-direction: column; /* перепроверить */
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     margin-inline: auto;
 }
 
 
-.add-news {
+.add-news,
+.add-categories {
     font-size: 32px;
     font-weight: 700;
 }
@@ -28,14 +29,14 @@ main {
 
 }
 
-.news-name, .news-category, .news-cover, .news-content {
+.news-name, .news-category, .news-cover, .news-content, .category-name {
     font-size: 14px;
     font-weight: 500;
     color: #707070;
 }
 
 .name-input, .category-input, .cover-input, .content-input {
-    color: #BDBDBD;
+    color: #3D3D3D;
     border: 1px solid #E6E6E6;
     border-radius: 12px;
     padding: 16px;
@@ -46,7 +47,6 @@ main {
 }
 
 .name-input::placeholder {
-    color: #BDBDBD;
     font-size: 16px;
     font-weight: 500;
 }
@@ -62,13 +62,11 @@ main {
 
 .cover-input {
     background-color: #C9C9C9;
-    color: #3D3D3D;
     padding: 0px;
     font-size: 14px;
     font-weight: 500;
 }
 
 .content-input {
-    margin-bottom: 25px;
     resize: vertical;
 }

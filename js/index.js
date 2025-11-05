@@ -1,5 +1,35 @@
 const BASE_URL = "https://webfinalapi.mobydev.kz";
 
+async function deleteNews (id) {
+    const authToken = localStorage.getItem("authToken");
+
+    if (!authToken) {
+        alert ("Авторизуйтесь для удаления!");
+        return;
+    }
+
+    const isConfirmed = confirm("Вы уверены, что хотите удалить данную новость?");
+    if (!isConfirmed) return;
+
+    try {
+        const response = await fetch (`${BASE_URL}/news/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization':`Bearer ${authToken}`
+            }
+        });
+
+        if (response.ok) {
+            alert ('Новость успешно удалена.')
+            fetchAndRenderNews();
+        } else {
+            alert ('Ошибка при удалении новости.')
+        }
+    } catch (error) {
+        console.error('Ошибка', error);
+    }
+}
+
 async function fetchAndRenderNews() {
     try {
         const response = await fetch(`${BASE_URL}/news`);
@@ -42,7 +72,7 @@ async function fetchAndRenderNews() {
                             <button
                                 type="button"
                                 class="button button--red button--small"
-                                onclick="deleteNews(${news.id})"
+                                data-id="${news.id}"
                             >
                                 Удалить
                             </button>
@@ -76,8 +106,10 @@ function setupActionButtons() {
 
     document.querySelectorAll(".news-card__actions button.button--red").forEach(button => {
         button.addEventListener("click", () => {
+            const authToken = localStorage.getItem("authToken");
             if (!authToken) return alert("Авторизуйтесь для удаления.");
-            deleteNews(button.getAttribute("onclick").match(/\d+/)[0]);
+            const id = button.dataset.id;
+            deleteNews(id);
         });
     });
 }

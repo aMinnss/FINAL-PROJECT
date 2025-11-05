@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 window.location.href = './index.html';
             } else {
                 const errorResponse = await response.json();
-                alert("Ошибка при добавлении новости!" + (errorResponse.message || ' Проверьте данные.'))
+                alert("Ошибка при обновлении новости!" + (errorResponse.message || ' Проверьте данные.'))
             }
         } catch (error) {
             console.error('Ошибка:', error);

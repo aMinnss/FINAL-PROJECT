@@ -2,14 +2,14 @@ body {
     margin: 0; /* чтобы убрать стандартные отступы браузера */
     height: 100vh; /* 100% высоты окна браузера */
     display: flex;
-    flex-direction: column; /* перепроверить */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .container {
     display: flex;
-    flex-direction: column; /* перепроверить */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 48px 32px;
